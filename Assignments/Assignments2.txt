@@ -1,0 +1,87 @@
+1) -What is NPM ?
+ans :-
+Npm is a package manager ,through which we can install 
+and uninstall node packages
+
+2) -What is 'Parcel/Webpack' ? Why do we need it ?
+ans :-
+Parcel is zero-config , HMR hot module replacement 
+uses file watcher algorithm , minifies files , does image
+optimization , does caching while development , does
+caching while development , polyfill , manages port number too
+
+3) -What is .parcel-cache ?
+ans :-
+
+
+4) -what is npx?
+ans :- npx stands for node package execute , its execute package
+given if its not present npm will install and run it from local
+node modules/.bin . npx is same as npm run 
+
+5) -What is difference between 'dependencies' vs 'devDependencies'
+ans :-
+Dependencies are needed to run our project efficiently.
+while DevDependencies are dependencies that are used for development
+purpose and does not needed to run but it does helps with development.
+
+6) -What is Tree Shaking ?
+ans :-
+Tree Shaking is the process through which unused libraries 
+or packages wouldnt be included in bundled form and only
+useful modules would be kept.Its a form of dead-code elimination.
+
+7) -What is Hot Module Replacement ?
+ans :-
+Hot Module Replacement is a feature by tools like 
+Webpack and parcel which automatically reloads webpage whenever we add
+, delete or change any code in our module and as it uses caching
+it usually doesnt take time after first load.
+
+8) -List down your favourite 5 superpowers of Parcel and describe any 3 of them in your
+own words
+ans :-
+Minifiying code :- Doing Tree Shaking
+cleaning our code : Cleans code replaces variable name with a short complex name 
+image optimization :- Reduces the memory required for image to be loaded 
+Adds Polyfill :- Adds polyfill so it is helpful to run on older versions 
+
+9) -What is `.gitignore`? What should we add and not add into it?
+ans :-
+gitignore is a file in which we add path of folder and files which we dont want
+to commit on our repository . We should add files files and folders that is created 
+on runtime or can be created again and again.
+
+10) -What is the difference between `package.json` and `package-lock.json` ?
+ans :-
+package.json defines and tells the packages needed to run the project and contains
+basic information about it , while package_lock.json locks the version and tell the 
+snapshot of package on products.
+
+11) - Why should I not modify `package-lock.json`?
+ans :-
+Because it contains the exact version of each installed package , and hence through
+which allows you to re-install them and  hence can install same dependency tree.
+
+12) - What is `node_modules` ? Is it a good idea to push that on git?
+ans :-
+node_modules are the cache of all dependencies installed , whenever we install
+any package they are downloaded from web to node_modules folder and whenever we 
+import it uses from node_modules.
+
+13) - What is the `dist` folder?
+ans :-
+dist folder contains all minified version of project that would be deployed to server
+whenever a build is created dist folder is occupied with minified files.
+
+14) - What is `browserlists`
+ans :-
+Browserlists is a tool in which we can add the atleast versions of browser should be
+supported.
+
+15) - Read about: ^ - caret and ~ - tilda
+ans :-
+
+
+16) - Read about Script types in html (MDN Docs)
+ans :-

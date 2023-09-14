@@ -2,18 +2,22 @@
   "name": "react-with-akshay-saini",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
+    "start": "parcel front.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "browserslist": "^4.21.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "parcel": "^2.9.3",
     "process": "^0.11.10"
-  }
+  },
+  "browserslist":[
+    "last 2 Chrome versions"
+  ]
 }
