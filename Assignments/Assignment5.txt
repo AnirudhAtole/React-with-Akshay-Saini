@@ -1,0 +1,13 @@
+1) What is the difference between Named Export, Default export and * as export?
+ans:-
+
+2) What is the importance of config.js file
+ans:-
+
+
+3) What are React Hooks?
+ans:-
+
+
+4) Why do we need a useState Hook?
+ans:-

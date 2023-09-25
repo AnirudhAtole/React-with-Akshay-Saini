@@ -1,26 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-const ImageContainer = () => <img alt="Logo" width={"50px"} src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/201711/zomato-fact-sheet_660_052417055850_111517063712.jpg?size=948:533"/>
-
-const NavIcons = () =>{
-    return(
-        <>
-        <div className="nav-icons">
-        <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Contact</li>
-            <li>Cart</li>
-        </ul>
-        </div>
-        </>
-    )
-}
-
-const restaraunts = [
+export const restaraunts = [
     {
       type: "restaurant",
       data: {
@@ -751,61 +730,3 @@ const restaraunts = [
       subtype: "basic",
     },
   ];
-
-
-const RestaurantCard = ({
-    name,
-    cuisines,
-    cloudinaryImageId,
-    lastMileTravelString
-}) =>{
-    return(
-        <div className="restaurant-card">
-                <img alt="restaurant image" style= {{
-                    width:"100%"
-                }}src= {"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId} />
-            <h3>{name}</h3>
-            <h3>{cuisines.join(",")}</h3>
-            <h3>{lastMileTravelString} minutes</h3>
-        </div>
-    )
-}
-
-const RestaurantList = () =>{
-    return(
-        <>
-        <div className="restaurant-list">
-            {
-            restaraunts.map((restaurant)=>{
-            return <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>;
-            })
-        }
-        </div>
-        </>
-    )
-}
-
-const Body = () => <RestaurantList/>
-
-const Header = () =>{
-    return(
-        <div className="header">
-            <ImageContainer />
-            <NavIcons />
-        </div>
-    )
-}
-
-const AppLayout = ( ) =>{
-    return(
-        <>
-        <Header />
-        <RestaurantList/>
-        {/* <Body />
-        <Footer /> */}
-        </>
-
-    )
-}
-
-root.render(<AppLayout/>);

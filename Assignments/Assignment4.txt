@@ -1,0 +1,54 @@
+1) Is JSX mandatory for React?
+ans:-
+No jsx is not mandatory for react , jsx is a part of code which
+makes react.createlement simple.
+
+2) Is ES6 mandatory for React?
+ans:- 
+No ES6 is not mandatory for React we can still use ES5 js 
+to code element and write functions.
+
+3){TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+ans:- 
+{TitleComponent} means we have a TitleComponent as a js component inside
+jsx code
+
+{<TitleComponent/>} it means we are executing a functional component inside a jsx and returning as a jsx code
+
+
+4) How can I write comments in JSX?
+ans:-
+We use comments in jsx as we use in js , we just use curly braces as we use to write a js code
+and init we use same js comments.
+
+5) What is <React.Fragment></React.Fragment> and <></> ?
+ans:-
+We can only return a single element from a react component , but using react.Fragment
+we can wrap multiple element and return it .
+
+6) What is Virtual DOM?
+ans:- 
+Virtual dom is a copy of original dom which keeps track of all the necessary changes to be made at particular moment.
+
+7) What is Reconciliation in React?
+ans:-
+
+
+8) What is React Fiber?
+ans:-
+
+
+9) Why we need keys in React? When do we need keys in React?
+ans:- 
+
+
+10) Can we use index as keys in React?
+ans:-
+
+
+11) What is props in React? Ways to
+ans:-
+
+
+12) What is a Config Driven UI ?
+ans:- 

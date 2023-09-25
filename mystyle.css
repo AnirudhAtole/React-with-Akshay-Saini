@@ -21,14 +21,15 @@
 
 .restaurant-card{
     width: 200px;
+    margin: 5px;
     border: 1px solid black;
-    margin: 3px;
     padding: 5px;
 }
 
 .restaurant-list{
-    margin: 10px;
+    padding: 5px;
+    margin: 5px;
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-evenly;
 }
