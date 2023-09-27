@@ -2,7 +2,7 @@ const RestaurantCard = ({
     name,
     cuisines,
     cloudinaryImageId,
-    lastMileTravelString
+    avgRatingString
 }) =>{
     return(
         <div className="restaurant-card">
@@ -11,7 +11,7 @@ const RestaurantCard = ({
                 }}src= {"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/"+cloudinaryImageId} />
             <h3>{name}</h3>
             <h4 >{cuisines.slice(0,3).join(",")}</h4>
-            <h3>{lastMileTravelString} minutes</h3>
+            <h3>{avgRatingString} stars</h3>
         </div>
     )
 }

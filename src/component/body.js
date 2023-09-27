@@ -1,46 +1,52 @@
-import { restaraunts } from "../constants";
 import RestaurantCard from "./card";
-import { useState } from "react";
+import { useState ,useEffect } from "react";
+import { swiggyApi } from "../constants";
+import {shimmer} from "./cardsShimmer"
 
-function filterRestaurantList(name){
-    if(name.trim() === ""){
-        return restaraunts;
-    }
-    return restaraunts.filter((restaurant)=>{
-        let resName = restaurant.data.name.toLocaleLowerCase();
-        if(resName.includes(name.toLowerCase())){
-            return true;
-        }
-        else{
-            return false;
-        }
-    })
+function filterRestaurantList(name,restaurantList){
+    return restaurantList.filter((restaurant)=> restaurant.info.name.toLowerCase().includes(name.toLowerCase()));
 }
 
 const Body = () =>{
-    const[restaurantList,setRestaurantList] = useState(restaraunts);
+    const[filteredRestaurant , setFilteredRestaurant] = useState([])
+    const[restaurantList,setRestaurantList] = useState([]);
     const[searchText , setSearchText] = useState("");
-    return(
+
+    useEffect(()=>{
+        getRestaurant();
+    },[])
+
+    async function getRestaurant(){
+        const res = await fetch(swiggyApi);
+        const result = await res.json();
+        let restaurantLists = result?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+        setRestaurantList(restaurantLists);
+        setFilteredRestaurant(restaurantLists);
+    }
+
+    return restaurantList?.length === 0 ? (
+        <h1>Loading.............</h1>
+      ) : (
         <>
         <input type="text" className="search-box" value={searchText}
         onChange={(e)=>{
+            setFilteredRestaurant(filterRestaurantList(e.target.value,restaurantList));
             setSearchText(e.target.value)
-            // setRestaurantList(filterRestaurantList(e.target.value));
         }}/>
         <button className="search-btn"
         onClick={()=>{
-            setRestaurantList(filterRestaurantList(searchText));
+            setFilteredRestaurant(filterRestaurantList(searchText,restaurantList));
         }}
         >Search </button>
         <div className="restaurant-list">
             {
-            restaurantList.map((restaurant)=>{
-            return <RestaurantCard {...restaurant.data} key={restaurant.data.id}/>;
+            filteredRestaurant.map((restaurant)=>{
+            return <RestaurantCard {...restaurant.info} key={restaurant.info.id}/>;
             })
         }
         </div>
         </>
-    )
+    ) 
 }
 
 export default Body;

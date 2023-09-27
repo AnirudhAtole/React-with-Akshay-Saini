@@ -5,6 +5,7 @@ const ImageContainer = () => <img alt="Logo" width={"50px"} src="https://akm-img
 const Header = () =>{
     return(
         <div className="header">
+               
             <ImageContainer />
             <NavIcons />
         </div>
